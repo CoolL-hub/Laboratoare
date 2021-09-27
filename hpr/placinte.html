@@ -1,50 +1,76 @@
 ﻿<html>
 <head>
 <style>
+h2{
+   color:white;
+   font-family: Consolas;
+}
 .links
 {
-border-radius:10px;
+border-radius:15px;
 }
 .links:hover
 {
 background-color:green;
 }
+li{
+   margin-left:3%;
+   margin-bottom: 2%;
+   font-family:Consolas;
+   color:white;
+}
 .poze
 {
 border-radius:20px;
+margin-left:5%;
+}
+p{
+  color:white;
+  background-color: #cc6600;
+  padding: 1%;
+  border-radius: 15px;
+}
+.bg-image{
+  display: block;
+  width: 60%;
+  height: 61.6%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 </style>
 </head>
-<body bgcolor="lightgray">
-<table border="0" width="100%" height="10%">
-<tr>
-<td width="33.33%" align="center" bgcolor="yellow" class="links"><a href="#here"><font color="red" size=5>Ingrediente</font></td></a>
-<td width="33.33%" align="center" bgcolor="yellow" class="links"><a href="#here1"><font color="red" size=5>Mod de preparare</font></td></a>
-<td width="33.33%" align="center" bgcolor="yellow" class="links"><a href="HTMLProject.html"><font color="red" size=5>Meniul Principal</font></td></a>
-</tr>
-</table>
-<img src="background/placinta.jpg" width="100%" class="poze">
-<img width=50% height=90% src="https://www.kingarthurflour.com/sites/default/files/styles/featured_image/public/2020-03/Ingredients_process.jpg?itok=4-okFm0X.jpg" align="left" class="poze" hspace=5% vspace=10%>
+<body bgcolor="#333333">
+   <table border=0 width=100%>
+     <tr>
+       <td colspan=3 height=1% align="center" style="border-radius: 15px;" bgcolor="#cc6600"><font color="white" size=7>Plăcinta</font></td></a>
+     </tr>
+     <tr>
+       <td width="33.33%" height=10% style="height: 50px;" align="center" bgcolor="#cc6600" class="links"><a href="#ingrediente"><font color="white" size=5>Ingrediente</font></td></a>
+       <td width="33.33%" height=10% align="center" bgcolor="#cc6600" class="links"><a href="#preparare"><font color="white" size=5>Mod de preparare</font></td></a>
+       <td width="33.33%" height=10% align="center" bgcolor="#cc6600" class="links"><a href="HTMLProject.html"><font color="white" size=5>Meniul Principal</font></td></a>
+     </tr>
+   </table>
+<img src="background/placinta.jpg" class="poze bg-image">
 
-<BR><BR><BR><BR><BR><BR><BR><a id="here"></a><BR><BR><BR><BR><BR>
-<div style="background-color: CadetBlue; "><font size=8>Ingrediente:</font></div>
+<a id="ingrediente">
+<h1><p align="center">Ingrediente:</p></h1>
+<img width=40% height=60% hspace=5% src="background/placinta-1.jpg" align="left" class="poze">
 <ul>
-<h1>
+<h2 style="margin-top: 5%;">
 <li>500 g faină</li>
 <li>320-350 ml apă călduță</li>
 <li>7 g drojdie uscată sau 25 g proaspătă</li>
 <li>1 linguriță de zahăr</li>
 <li>1 linguriță de sare</li>
 <li>50 g untură sau unt sau 50 ml ulei</li>
-</h1>
+</h2>
 </ul>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><a id="here1"></a><br><br><br>
-<div style="background-color: CadetBlue; "><p align="center"><font size=10><b>Mod de lucru </b></font></p></div>
-<p>
+<h1><a id="preparare"></a><p align="center" style="margin-top:20%">Mod de preparare:</p></h1>
 <img width=40% height=70% hspace=10 src="https://res.cloudinary.com/hksqkdlah/image/upload/v1481134739/20887_sfs-pie-dough-9.jpg" class="poze" align="right">
-<h2>
-<ol>
+<ul align="left" style="font-size: 21px;">
    <li>Se cerne făina și se amestecă impreună cu zahărul si drojdia uscată.
 Dacă folosiți drojdie proaspătă, o amestecați cu puțină apă caldă și o linguriță
 de făină și o lăsați să dospească 5 minute, apoi o răsturnați peste făină.
@@ -64,8 +90,7 @@ Trântiți aluatul de masă de câteva ori. Veți vedea că devine mai fin și m
 dospească, aproximativ o oră.
 
    <li>După, faceți forma plăcintei, puneți implutura și după în cuptor.
-</ol>
-</h2>
-</p>
+</ul>
+<br>
 </body>
 </html>
