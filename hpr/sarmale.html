@@ -56,16 +56,38 @@ li{
   font-family:Consolas;
   color:white;
 }
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgba(180, 52, 52, 0.8);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
 </style>
 <body bgcolor="#333333">
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
 <table border=0 width=100%>
   <tr>
     <td colspan=3 height=1% align="center" style="border-radius: 15px;" bgcolor="#cc6600"><font color="white" size=7>Sarmale</font></td></a>
   </tr>
   <tr>
-    <td width="33.33%" height=10% style="height: 50px;" align="center" bgcolor="#cc6600" class="links"><a href="#ingrediente"><font color="white" size=5>Ingrediente</font></td></a>
-    <td width="33.33%" height=10% align="center" bgcolor="#cc6600" class="links"><a href="#preparare"><font color="white" size=5>Mod de preparare</font></td></a>
-    <td width="33.33%" height=10% align="center" bgcolor="#cc6600" class="links"><a href="HTMLProject.html"><font color="white" size=5>Meniul Principal</font></td></a>
+    <td width="33.33%" style="height: 50px;" align="center" bgcolor="#cc6600" class="links"><a href="#ingrediente"><font color="white" size=5>Ingrediente</font></td></a>
+    <td width="33.33%" align="center" bgcolor="#cc6600" class="links"><a href="#preparare"><font color="white" size=5>Mod de preparare</font></td></a>
+    <td width="33.33%" align="center" bgcolor="#cc6600" class="links"><a href="HTMLProject.html"><font color="white" size=5>Meniul Principal</font></td></a>
   </tr>
 </table>
 <img src="background/sarmale.png" class="bg-image poze"></div>
@@ -133,6 +155,23 @@ când în când cratiţa, ca să nu se prindă sarmalele de fund şi să se afum
 <li> Când sunt fierte, sarmalele se dau la cuptor să se rumenească frumos.
 </ul>
 <br><br>
-
+<script>
+  var mybutton = document.getElementById("myBtn");
+  
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
 </body>
 </html>
