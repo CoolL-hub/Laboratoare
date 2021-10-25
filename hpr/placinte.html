@@ -8,7 +8,7 @@
    <script type="text/javascript" src="app.js"></script>
 </head>
 
-<body bgcolor="#333333">
+<body bgcolor="#333333" onload="hideIngr()">
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <table border=0 width=100%>
@@ -23,20 +23,23 @@
 </table>
 <img src="images/placinta/placinta.jpg" class="poze bg-image">
 
-<div id="ingr">
-<a id="ingrediente">
-<h1><p align="center">Ingrediente:</p></h1>
-<img width=40% height=60% hspace=5% src="images/placinta/placinta-1.jpg" align="left" class="poze">
-<ul>
-<h2>
-<li>500 g faină</li>
-<li>320-350 ml apă călduță</li>
-<li>7 g drojdie uscată sau 25 g proaspătă</li>
-<li>1 linguriță de zahăr</li>
-<li>1 linguriță de sare</li>
-<li>50 g untură sau unt sau 50 ml ulei</li>
-</h2>
-</ul>
+<div>
+   <a id="ingrediente">
+   <h1><p align="center">Ingrediente:</p></h1>
+   <div>
+      <button type="button" id="butonIngr" onclick="showIngr()">Afișează</button>
+   </div>
+   <center>
+   <div id="ingr">
+      <h3>500 g faină</h3>
+      <h3>320-350 ml apă călduță</h3>
+      <h3>7 g drojdie uscată sau 25 g proaspătă</h3>
+      <h3>1 linguriță de zahăr</h3>
+      <h3>1 linguriță de sare</h3>
+      <h3>50 g untură sau unt sau 50 ml ulei</h3>
+   </div>
+      <img width=40% height=60% src="images/placinta/placinta-1.jpg" class="poze">
+   </center>
 </div>
 
 <h1><a id="preparare"></a><p align="center">Mod de preparare:</p></h1>

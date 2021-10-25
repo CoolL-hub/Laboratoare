@@ -8,7 +8,7 @@
   <script src="app.js"></script>
 </head>
 
-<body bgcolor=#333333>
+<body bgcolor=#333333 onload="hideIngr()">
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <table border="0" width="100%" height="10%">
@@ -25,21 +25,25 @@
 
 <a id="aici"></a>
 <h1><p align="center">Ingrediente:</p></h1>
+<div>
+  <button type="button" id="butonIngr" onclick="showIngr()">Afișează</button>
+</div>
 <center>
-<h3>800 g carne de porc pentru friptură</h3>
-<h3>1 ardei gras</h3>
-<h3>3-4 linguri ulei</h3>
-<h3>1 ardei iute</h3>
-<h3>1 ceapă</h3>
-<h3>2-3 roşii</h3>
-<h3>2-3 căţei de usturoi</h3>
-<h3>sare</h3>
-<h3>150 ml vin alb</h3>
-<h3>piper</h3>
+<div id="ingr">
+    <h3>800 g carne de porc pentru friptură</h3>
+    <h3>1 ardei gras</h3>
+    <h3>3-4 linguri ulei</h3>
+    <h3>1 ardei iute</h3>
+    <h3>1 ceapă</h3>
+    <h3>2-3 roşii</h3>
+    <h3>2-3 căţei de usturoi</h3>
+    <h3>sare</h3>
+    <h3>150 ml vin alb</h3>
+    <h3>piper</h3>
+</div>
+<img src="images/friptura/friptura-1.jpg" class="poze poz1">
 </center>
-<center>
-<img src="images/friptura/friptura-1.jpg" class="poze">
-</center>
+
 <a id="aici1"></a>
 <table border="0" width="100%" height="10%">
 <a id="aici"></a>

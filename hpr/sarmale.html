@@ -8,7 +8,7 @@
   <script type="text/javascript" src="app.js"></script>
 </head>
 
-<body bgcolor="#333333">
+<body bgcolor="#333333" onload="hideIngr()">
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <table border=0 width=100%>
@@ -39,24 +39,27 @@
    sarmalele sunt uneori numite "găluci", „găluști”, 
    „găluște”.
 </h2>
-<div id="ingr">
+
+<div>
   <a id="ingrediente"></a>
   <h1><p align="center">Ingrediente:</p></h1>
-  <img class="poze" id="poze_l" src="images/sarmale/sarmale-2.jpg"  height=" 50%"align="left">
-  <ul>
-    <h2 align="center">
-    <pre>
-    - 1-2 verze murate
-    - 1kg de carne tocată de porc
-    - 1 ceașcă de orez (4-5 linguri)
-    - 1-2 cepe medii
-    - 200g pastă de tomate
-    - sare, piper, cimbru, foaie de dafin,
-      piper roșu, piper boabe
-    - 2-3 linguri ulei
-    </pre>
-    </h2>
-  </ul>
+  <div>
+    <button type="button" id="butonIngr" onclick="showIngr()">Afișează</button>
+  </div>
+  <center>
+  <div id="ingr">
+    <ul>
+        <h3>1-2 verze murate</h3>
+        <h3>1kg de carne tocată de porc</h3>
+        <h3>1 ceașcă de orez (4-5 linguri)</h3>
+        <h3>1-2 cepe medii</h3>
+        <h3>200g pastă de tomate</h3>
+        <h3>sare, piper, cimbru, foaie de dafin, piper roșu, piper boabe</h3>
+        <h3>2-3 linguri ulei</h3>
+    </ul>
+  </div>
+  <img class="poze" src="images/sarmale/sarmale-2.jpg" height=" 50%">
+  </center>
 </div>
 
 <div>

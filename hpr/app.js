@@ -1,5 +1,3 @@
-//let mybutton = document.getElementById("myBtn");
-  
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -13,4 +11,17 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+
+function hideIngr(){
+  document.getElementById("ingr").style.display="none";
+  document.getElementById("butonIngr").innerText = "Afișează";
+  document.getElementById("butonIngr").onclick = function() { showIngr(); };
+}
+
+function showIngr(){
+  document.getElementById("ingr").style.display="block";
+  document.getElementById("butonIngr").innerText = "Ascunde";
+  document.getElementById("butonIngr").onclick = function() { hideIngr(); };
 }

@@ -8,7 +8,7 @@
   <script type="text/javascript" src="app.js"></script>
 </head>
 
-<body bgcolor="#333333">
+<body bgcolor="#333333" onload="hideIngr()">
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <table border=0 width=100%>
@@ -43,19 +43,19 @@
    anemicilor.</pre>
 </h2>
 
-<div id="ingr">
-<h1><a id="ingrediente"></a><p align="center" >Ingrediente:</p></h1>
-  <img src="images/mamaliga/mamaliga-2.jpg" class="poze" id="poze_l">
-  <h2 align="center">
-    <pre>
-      
-      -Făină de mălai 1 pahar de 250-300ml
-      
-      -Apă 2 pahare
-      
-      -Sare 0.5 lingurițe(opțional) și 1 lingură de unt
-    </pre>
-  </h2>
+<div>
+  <h1><a id="ingrediente"></a><p align="center" >Ingrediente:</p></h1>
+  <div>
+    <button type="button" id="butonIngr" onclick="showIngr()">Afișează</button>
+  </div>
+  <center>
+  <div id="ingr">
+    <h3>Făină de mălai 1 pahar de 250-300ml</h3>
+    <h3>Apă 2 pahare</h3>
+    <h3>Sare 0.5 lingurițe(opțional) și 1 lingură de unt</h3>
+  </div>
+  <img src="images/mamaliga/mamaliga-2.jpg" class="poze">
+  </center>
 </div>
 
 <div>
