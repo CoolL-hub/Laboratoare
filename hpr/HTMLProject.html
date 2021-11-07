@@ -1,10 +1,17 @@
 ﻿<html>
 <style>
+* {
+    box-sizing: border-box;
+    margin:0;
+    font-family:fantasy;
+}
+
 body{
   background-image: url(images/principal_back.jpg);
   background-size: cover;
 }
 .bg-image {
+  margin:1%;
   background-image: url(images/title_back.jpg);
   filter: blur(2px);
   height: 30%; 
@@ -22,16 +29,55 @@ body{
   transform: translate(-50%, -50%);
   width: 80%;
   padding: 20px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.text > ul{
+  padding-left: 30%;
+  text-align: left;
 }
 
 li{
   padding: 5px;
 }
+
 i{
   font-size: 3.5vh;
   font-family:cursive;
   font-weight:bold;
+}
+
+footer {
+  display: flex;
+  position: absolute;
+  background-color: rgba(224, 195, 185, 0.712);
+  bottom: 0;
+  width: 100%;
+  height: 13%;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+}
+footer a{
+  font-size: 35;
+  color:rgb(105, 45, 24);
+}
+
+a{
+  text-decoration: none;
+  color:rgb(247, 234, 211);
+  font-size: 20;
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+font{
+  font-size: 50;
 }
 </style>
 <body>
@@ -39,10 +85,14 @@ i{
 <div class="bg-image"></div>
 <div class="text">
 <font size=7 align="center"><b>Bucătăria moldovenească</b></font>
+<ul>
+  <li><a href="login.php">Login</a>
+  <li><a href="register.php">Register</a>
+</ul>
 </div>
 <br>
 
-<font style="font-family:fantasy" size=8>
+<font>
 <ul>
  <li style="margin-left:45px"><a href="mamaliga.html"><font color=#ffcc33>Mămăligă</font></a><i>- Terci din făină de porumb fiartă în apă.</i>
  <li style="margin-left:90px"><a href="sarmale.html"><font color=#ffa64d>Sarmale</font></a><i>- Foi de varză sau frunze de vie cu orez și cu carne.</i>
@@ -50,6 +100,10 @@ i{
  <li style="margin-left:180px"><a href="friptura.html"><font color=#993300>Friptură</font></a><i>- Carne pregătită la aragaz sau la grătar.</i>
 </ul>
 </font>
+
+<footer>
+  <a href="feedback.html">Feedback</a></p>
+</footer>
 
 </body>
 </html>

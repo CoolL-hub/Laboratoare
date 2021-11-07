@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mamaliga</title>
   <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/app.js"></script>
 </head>
 
-<body bgcolor="#333333" onload="hideIngr()">
+<body bgcolor="#333333">
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <table border=0 width=100%>
@@ -49,10 +50,12 @@
     <button type="button" id="butonIngr" onclick="showIngr()">Afișează</button>
   </div>
   <center>
-  <div id="ingr">
-    <h3>Făină de mălai 1 pahar de 250-300ml</h3>
-    <h3>Apă 2 pahare</h3>
-    <h3>Sare 0.5 lingurițe(opțional) și 1 lingură de unt</h3>
+    <div id="modal">
+      <div id="modal-content">
+        <h3>Făină de mălai 1 pahar de 250-300ml</h3>
+        <h3>Apă 2 pahare</h3>
+        <h3>Sare 0.5 lingurițe(opțional) și 1 lingură de unt</h3>
+      </div>
   </div>
   <img src="images/mamaliga/mamaliga-2.jpg" class="poze">
   </center>
