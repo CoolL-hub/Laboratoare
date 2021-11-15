@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feedback</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/app.js"></script>
 </head>
@@ -29,7 +29,7 @@
         <p>Părerea dm-voastră</p>
         <textarea rows=5 id="review" name="review" placeholder="Părere"></textarea> 
         <p>Nota</p>
-        <input type="number" id="mark" name="mark" placeholder="Nota(0-10)">
+        <input type="number" id="mark" name="mark" min="0" max="10" placeholder="Nota(0-10)">
         <br>
         <button type="button" id="sendButton" class="button" onclick="sendData()">Trimite</button>
         <button type="button" class="button" onclick="getData()">Reîncărcare</button>
@@ -48,11 +48,9 @@
     </div>
   </div>
 </div>
-  <script src="js/sendData.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/del.js"></script>
-  <script src="js/showFeed.js"></script>
-  <script src="js/edit.js"></script>
-  <script src="js/resendData.js"></script>
+  <script src="js/feedback_js/data.js"></script>
+  <script src="js/feedback_js/del.js"></script>
+  <script src="js/feedback_js/edit.js"></script>
+  <script src="js/feedback_js/sendData.js"></script>
 </body>
 </html>
