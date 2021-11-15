@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 function getData(){
     $.ajax({
-    url: "php/db_data.php",
+    url: "php/feedback_php/db_data.php",
     type: "POST",
     datatype: "html",
     success: function(data){

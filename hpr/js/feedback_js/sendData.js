@@ -4,7 +4,7 @@ function sendData(){
     if(mark.value >= 0 && mark.value <= 10){
         data=$('#myform').serialize();
         $.ajax({
-            url: "php/sendData.php",
+            url: "php/feedback_php/sendData.php",
             type:'POST',
             data:data,
             dataType:'html'
