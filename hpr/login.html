@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/account.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <a href="HTMLProject.html">Main page</a>
+    </div>
+    <div class="fr">
+      <div class="form" id="login">
+        <form method="POST">
+          <p>Username or e-mail</p>
+          <input type="text" name="login" placeholder="Enter Username" />
+          <h6 id="incUser"></h6>
+          <p>Password</p>
+          <input type="password" name="password" placeholder="Enter Password" />
+          <h6 id="incPass"></h6>
+          <button type="button" onclick="checkUserLogin();">Login</button>
+          <br />
+          <a href="register.html">Register</a>
+          <br />
+          <a href="">Forgot password?</a>
+        </form>
+      </div>
+    </div>
+    <script src="js/login_register.js"></script>
+  </body>
+</html>

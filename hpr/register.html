@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/account.css" />
+</head>
+
+<body>
+    <div class="header">
+      <a href="HTMLProject.html"> Main page</a>
+    </div>
+    <div class="fr">
+        <div class="form" id="reg">
+            <form method="POST" id="register">
+                <p>Username</p>
+                <input type="text" name="login" placeholder="Enter Username" />
+                <h6 id="userErr"></h6>
+                <p>E-mail</p>
+                <input type="text" name="email" placeholder="Enter E-mail" />
+                <h6 id="emailErr"></h6>
+                <p>Password</p>
+                <input type="password" name="password" placeholder="Enter Password" />
+                <h6 id="passErr"></h6>
+                <p>Confirm password</p>
+                <input type="password" name="password2" placeholder="Confirm Password" />
+                <h6 id="pass2Err"></h6>
+                <br />
+                <button type="button" onclick="checkUser();">Register</button>
+                <br />
+                <a href="login.html">Login</a>
+            </form>
+        </div>
+    </div>
+    <script src="js/login_register.js"></script>
+</body>
+
+</html>
