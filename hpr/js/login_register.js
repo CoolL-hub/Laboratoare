@@ -85,42 +85,37 @@ function checkUser() {
     register = true;
   }
 
-  if (register) {
-    //alert("Success register!");
-    //window.location.href = "login.html";
-  }
-  
   // Manual AJAX
-  if (register) {
-    let data = 'login='+user.value + '&password=' + pass.value + '&email=' + email.value;
+  // if (register) {
+  //   let data = 'login='+user.value + '&password=' + pass.value + '&email=' + email.value;
 
-    let scr = new XMLHttpRequest();
+  //   let scr = new XMLHttpRequest();
 
-    // scr.onreadystatechange = function () {
-    //   if (scr.readyState === 4 && scr.status === 200) {
-    //       console.log("yes");
-    //     }
-    // };
+  //   // scr.onreadystatechange = function () {
+  //   //   if (scr.readyState === 4 && scr.status === 200) {
+  //   //       console.log("yes");
+  //   //     }
+  //   // };
 
-    scr.open("POST", "php/register.php", true);
-    scr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); //To send POST
-    document.getElementById("register").reset();
+  //   scr.open("POST", "php/register.php", true);
+  //   scr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); //To send POST
+  //   document.getElementById("register").reset();
 
-    scr.send(data);
+  //   scr.send(data);
+  // }
+
+  if(register){
+    data=$('#register').serialize();
+    $.ajax({
+        type: "POST",
+        url: 'php/register.php',
+        data: data,
+        success: function(resp){
+            if(!resp)
+              userErr.innerHTML = "User already exists!";
+            else
+              window.location.href = "./login.html";
+        }
+    });
   }
-
-  //if(register){
-  //    data=$('#reg').serialize();
-  //    $.ajax({
-  //        type: "POST",
-  //        url: 'php/register.php',
-  //        data: data,
-  //        success: function(){
-  //            console.log("Yes!");
-  //            document.getElementById("reg").reset();
-  //            window.open("login.html");
-  //        }
-  //
-  //    });
-  //}
 }

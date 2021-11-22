@@ -4,7 +4,15 @@
     $email = $_POST["email"];
 
     $mysqli = new mysqli('localhost', 'root', '07122001', 'teh_web');
-    $mysqli->query("INSERT INTO accounts VALUES(NULL, '$name', '$pass', '$email')");
+    
+    $res = $mysqli->query("SELECT username FROM accounts WHERE username='".$name."'");
 
+    if(mysqli_num_rows($res) != 0)
+        echo false;
+    else
+    {
+        $mysqli->query("INSERT INTO accounts VALUES(NULL, '$name', '$pass', '$email')");
+        echo true;
+    }
     $mysqli->close();
 ?>

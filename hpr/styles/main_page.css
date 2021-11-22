@@ -5,12 +5,12 @@
 }
 
 body{
-  background-image: url(images/principal_back.jpg);
+  background-image: url("../images/principal_back.jpg");
   background-size: cover;
 }
 .bg-image {
   margin:1%;
-  background-image: url(images/title_back.jpg);
+  background-image: url("../images/title_back.jpg");
   filter: blur(2px);
   height: 30%; 
   background-position: center;
