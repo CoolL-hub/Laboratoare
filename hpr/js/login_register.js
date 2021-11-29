@@ -30,9 +30,22 @@ function checkUserLogin() {
     login = false;
   }
 
-  if (login) {
-    alert("Success login!");
-    window.location.href = "HTMLProject.html";
+  if(login){
+    data=$('#login').serialize();
+    $.ajax({
+        type: "POST",
+        url: 'php/login.php',
+        data: data,
+        success: function(resp){
+          if(!resp)
+            passErr.innerHTML = "Incorrect user or password";
+          else
+          {
+            alert("Succes login!");
+            window.location.href = "./HTMLProject.html";
+          }
+        }
+    });
   }
 }
 
@@ -111,10 +124,10 @@ function checkUser() {
         url: 'php/register.php',
         data: data,
         success: function(resp){
-            if(!resp)
-              userErr.innerHTML = "User already exists!";
-            else
-              window.location.href = "./login.html";
+          if(!resp)
+            userErr.innerHTML = "User already exists!";
+          else
+            window.location.href = "./login.html";
         }
     });
   }
