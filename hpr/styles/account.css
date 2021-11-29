@@ -20,7 +20,7 @@ body{
     padding-top:3%;
     padding-bottom:2%;
 }
-#login{
+#log{
     margin-top:3%;
 }
 #reg{
@@ -53,7 +53,7 @@ input{
     padding: 0px 12px;
     box-sizing: border-box;
 }
-#login button{
+#log button{
     margin-top: 5%;
 }
 button{
