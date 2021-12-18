@@ -23,7 +23,7 @@
 
 <div class='rev'>
   <div class="reviewsInput">
-    <form id="myform" method="POST" autocomplete="off">
+    <form id="myform" method="GET" autocomplete="off" action="php/feedback_php/sendData.php">
         <p>Numele</p>
         <input type="text" maxlength=15 id="name" name="name" placeholder="Nume">
         <p>Părerea dm-voastră</p>
@@ -31,7 +31,8 @@
         <p>Nota</p>
         <input type="number" id="mark" name="mark" min="0" max="10" placeholder="Nota(0-10)">
         <br>
-        <button type="button" id="sendButton" class="button" onclick="sendData()">Trimite</button>
+        <input type="submit" value="Trimite">
+        <!-- <button type="button" id="sendButton" class="button" onclick="sendData()">Trimite</button> -->
         <button type="button" class="button" onclick="getData()">Reîncărcare</button>
     </form>
   </div>
