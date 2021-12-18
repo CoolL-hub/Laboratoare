@@ -4,44 +4,46 @@ function checkUserLogin() {
   userErr = document.getElementById("incUser");
   passErr = document.getElementById("incPass");
 
-  login = false;
+  loginU = false;
+  passU = false;
 
   if (user.value.length < 5) {
-    userErr.innerHTML = "Incorrect username length.";
-    login = false;
-  } else {
-    userErr.innerHTML = "";
-    login = true;
+    userErr.innerHTML = "Username needs to be at least 5 characters long!";
+    loginU = false;
   }
-
-  if (user.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+  else if (user.value.match(/^[\w0-9]+$/)) {
     userErr.innerHTML = "";
-    login = true;
+    loginU = true;
+  }
+  else{
+    userErr.innerHTML = "Incorrect username format";
   }
 
   if (pass.value.length < 8) {
     passErr.innerHTML = "Incorrect password length.";
-    login = false;
+    passU = false;
   } else if (pass.value.match(/^(?=.*\d)(?=.*[a-z]).{8,50}$/)) {
     passErr.innerHTML = "";
-    login = true;
+    passU = true;
   } else {
     passErr.innerHTML = "Password must contain letters and numbers.";
-    login = false;
+    passU = false;
   }
 
-  if(login){
+  if(loginU && passU){
     data=$('#login').serialize();
     $.ajax({
         type: "POST",
         url: 'php/login.php',
         data: data,
         success: function(resp){
-          if(!resp)
+          console.log(resp);
+          if(resp == "false"){
             passErr.innerHTML = "Incorrect user or password";
-          else
+          }
+          else if(resp == "true")
           {
-            alert("Succes login!");
+            alert("Successfull login!");
             window.location.href = "./index.html";
           }
         }
@@ -58,59 +60,63 @@ function checkUser() {
   emailErr = document.getElementById("emailErr");
   passErr = document.getElementById("passErr");
   pass2Err = document.getElementById("pass2Err");
-  register = false;
+
+  loginU = false;
+  emailU = false;
+  passU = false;
+  pass2U = false;
 
   if (user.value.length < 5) {
-    userErr.innerHTML = "Needed length of minimum 6 characters.";
-    register = false;
+    userErr.innerHTML = "Username needs to be at least 5 characters long!";;
+    loginU = false;
   } else {
     userErr.innerHTML = "";
-    register = true;
+    loginU = true;
   }
 
   if (email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
     emailErr.innerHTML = "";
-    register = true;
+    emailU = true;
   } else {
     emailErr.innerHTML = "Incorrect e-mail format.";
-    register = false;
+    emailU = false;
   }
 
   if (pass.value.length < 8) {
     passErr.innerHTML = "Password must be at least 8 characters length.";
-    register = false;
+    passU = false;
   } else if (pass.value.match(/^(?=.*\d)(?=.*[a-z]).{8,50}$/)) {
     passErr.innerHTML = "";
-    register = true;
+    passU = true;
   } else {
     passErr.innerHTML = "Password must contain letters and numbers.";
-    register = false;
+    passU = false;
   }
 
   if (pass2.value.length === 0) {
-    register = false;
     pass2Err.innerHTML = "Can't be empty.";
+    pass2U = false;
   } else if (pass2.value != pass.value) {
     pass2Err.innerHTML = "Passwords do not match.";
-    register = false;
-  } else if(register){
+    pass2U = false;
+  } else{
     pass2Err.innerHTML = "";
-    register = true;
-  }else{
-    pass2Err.innerHTML = "";
+    pass2U = true;
   }
 
-  if(register){
+  if(loginU && emailU && passU && pass2U){
     data=$('#register').serialize();
     $.ajax({
         type: "POST",
         url: 'php/register.php',
         data: data,
         success: function(resp){
-          if(!resp)
+          if(resp == "false")
             userErr.innerHTML = "User already exists!";
-          else
+          else if(resp == "true"){
+            alert("Successfull registration!");
             window.location.href = "./login.html";
+          }
         }
     });
   }
