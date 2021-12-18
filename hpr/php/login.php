@@ -24,6 +24,7 @@
     }
     else
     {
+        //no user
         echo false;
     }
     $mysqli->close();

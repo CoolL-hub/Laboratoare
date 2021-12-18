@@ -42,7 +42,7 @@ function checkUserLogin() {
           else
           {
             alert("Succes login!");
-            window.location.href = "./HTMLProject.html";
+            window.location.href = "./index.html";
           }
         }
     });
@@ -93,29 +93,12 @@ function checkUser() {
   } else if (pass2.value != pass.value) {
     pass2Err.innerHTML = "Passwords do not match.";
     register = false;
-  } else {
+  } else if(register){
     pass2Err.innerHTML = "";
     register = true;
+  }else{
+    pass2Err.innerHTML = "";
   }
-
-  // Manual AJAX
-  // if (register) {
-  //   let data = 'login='+user.value + '&password=' + pass.value + '&email=' + email.value;
-
-  //   let scr = new XMLHttpRequest();
-
-  //   // scr.onreadystatechange = function () {
-  //   //   if (scr.readyState === 4 && scr.status === 200) {
-  //   //       console.log("yes");
-  //   //     }
-  //   // };
-
-  //   scr.open("POST", "php/register.php", true);
-  //   scr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); //To send POST
-  //   document.getElementById("register").reset();
-
-  //   scr.send(data);
-  // }
 
   if(register){
     data=$('#register').serialize();

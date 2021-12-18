@@ -8,6 +8,7 @@
             <th>Nota</th>
             <th>Părere</th>
             <th>Editare</th>
+            <th>Delete</th>
             </tr>';
 
             while($row = mysqli_fetch_array($result))
@@ -17,6 +18,7 @@
                 <td>' . $row["mark"] . '</td>
                 <td><button onclick="showFeed('.$row["id"].')">Check</button></td>
                 <td><button onclick="editData('.$row["id"].')">Edit</button></td>
+                <td><button onclick="deleteR(this, '.$row["id"].')">Delete</button></td>
                 </tr>';
             }
             $data .= '</table>';

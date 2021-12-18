@@ -11,7 +11,7 @@ function sendData(){
         });
 
         document.getElementById("myform").reset();
-        nota.style.borderColor = "";
+        mark.style.borderColor = "";
         document.getElementById("markErr").innerHTML = "";
     } 
     else{
